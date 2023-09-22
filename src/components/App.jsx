@@ -104,10 +104,10 @@ export const App = () => {
   return (
     <div>
       <Searchbar onSubmitSearchBar={onSubmitSearchBar} />
-      {loading && <Loader />}
       <AppStyle>
         <ImageGallery photos={photos} onClickImageItem={onClickOpenModal} />
       </AppStyle>
+      {loading && <Loader />}
       {photos.length !== 0 && btnLoadMore && <Button onClickRender={onClickRender} />}
       {showModal && <Modal selectedPhoto={selectedPhoto} onClose={toggleModal} />}
     </div>
